@@ -1,5 +1,10 @@
 {
   "name": "caffeine-core",
+  "author": {
+    "name": "Alan Reis",
+    "email": "alanreisanjo@gmail.com",
+    "url": "https://hoyasumii.dev"
+  },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
