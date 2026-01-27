@@ -1,6 +1,6 @@
 import { Entity } from "@/models";
 import { unpackEntity } from "./unpack-entity";
-import { describe, it, expect } from "bun:test";
+import { describe, expect, it } from "vitest";
 
 class TestEntity extends Entity {
 	public name: string;
