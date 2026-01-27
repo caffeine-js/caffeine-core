@@ -42,4 +42,9 @@ describe("Schema", () => {
 		expect(typeof json).toBe("string");
 		expect(JSON.parse(json)).toEqual(JSON.parse(JSON.stringify(schema)));
 	});
+
+	it("should return the original schema object via toJSON", () => {
+		const validator = new Schema(schema);
+		expect(validator.toJSON()).toEqual(schema);
+	});
 });

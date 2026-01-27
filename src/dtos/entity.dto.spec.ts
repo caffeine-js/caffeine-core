@@ -1,7 +1,7 @@
-import { describe, expect, it } from "vitest";
-import { Schema } from "../models/schema";
-import { EntityDTO } from "./entity.dto";
 import { v4 as uuidv4 } from "uuid";
+import { describe, expect, it } from "vitest";
+import { EntityDTO } from "@/dtos/entity.dto";
+import { Schema } from "@/models/schema";
 
 describe("EntityDTO", () => {
 	const validator = new Schema(EntityDTO);

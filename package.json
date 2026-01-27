@@ -13,7 +13,8 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "typebox": "^1.0.80"
+    "typebox": "^1.0.80",
+    "uuid": "^13.0.0"
   },
   "scripts": {
     "test": "vitest run",
