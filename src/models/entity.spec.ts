@@ -22,7 +22,7 @@ describe("Entity", () => {
 		const entity = TestEntity.create();
 		expect(entity.id).toBeDefined();
 		expect(typeof entity.id).toBe("string");
-		expect(entity.createdAt).toBeInstanceOf(Date);
+		expect(entity.createdAt).toBeTypeOf("string");
 		expect(entity.updatedAt).toBeUndefined();
 	});
 
@@ -34,8 +34,8 @@ describe("Entity", () => {
 		const entity = TestEntity.create({ id, createdAt, updatedAt });
 
 		expect(entity.id).toBe(id);
-		expect(entity.createdAt).toEqual(new Date(createdAt));
-		expect(entity.updatedAt).toEqual(new Date(updatedAt));
+		expect(entity.createdAt).toEqual(new Date(createdAt).toISOString());
+		expect(entity.updatedAt).toEqual(new Date(updatedAt).toISOString());
 	});
 
 	it("should accept valid custom values without updatedAt", () => {
@@ -45,7 +45,7 @@ describe("Entity", () => {
 		const entity = TestEntity.create({ id, createdAt });
 
 		expect(entity.id).toBe(id);
-		expect(entity.createdAt).toEqual(new Date(createdAt));
+		expect(entity.createdAt).toEqual(new Date(createdAt).toISOString());
 		expect(entity.updatedAt).toBeUndefined();
 	});
 

@@ -20,8 +20,8 @@ export function unpackEntity<Output>(
 	return {
 		about: {
 			id,
-			createdAt: createdAt.toISOString(),
-			updatedAt: updatedAt ? updatedAt.toISOString() : undefined,
+			createdAt: createdAt,
+			updatedAt: updatedAt,
 		},
 		data: props as Output,
 	};

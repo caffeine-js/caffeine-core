@@ -5,13 +5,13 @@ import { Schema } from "./schema";
 
 export abstract class Entity implements IEntity {
 	public readonly id: string;
-	public readonly createdAt: Date;
-	public updatedAt?: Date;
+	public readonly createdAt: string;
+	public updatedAt?: string;
 
 	protected constructor({ createdAt, id, updatedAt }: EntityDTO) {
 		this.id = id;
-		this.createdAt = new Date(createdAt);
-		this.updatedAt = updatedAt ? new Date(updatedAt) : undefined;
+		this.createdAt = new Date(createdAt).toISOString();
+		this.updatedAt = updatedAt ? new Date(updatedAt).toISOString() : undefined;
 	}
 
 	protected static prepare(data: EntityDTO): EntityDTO {
