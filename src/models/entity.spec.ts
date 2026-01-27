@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { v7 } from "uuid";
 import { Entity } from "./entity";
-import { InvalidEntityData } from "../errors/entity-validation.exception";
-import type { EntityDTO } from "../dtos/entity.dto";
-import { makeEntityFactory } from "../factories/make-entity.factory";
+import type { EntityDTO } from "@/dtos";
+import { makeEntityFactory } from "@/factories";
+import { InvalidEntityData } from "@/errors";
 
 class TestEntity extends Entity {
 	public constructor(data: EntityDTO) {

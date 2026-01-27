@@ -1,6 +1,6 @@
-import type { IEntity } from "../types/entity.interface";
-import { EntityDTO } from "../dtos/entity.dto";
-import { InvalidEntityData } from "../errors/entity-validation.exception";
+import type { IEntity } from "@/types";
+import { EntityDTO } from "@/dtos";
+import { InvalidEntityData } from "@/errors";
 import { Schema } from "./schema";
 
 export abstract class Entity implements IEntity {

@@ -1,5 +1,4 @@
 {
-	"root": false,
 	"$schema": "https://biomejs.dev/schemas/2.3.12/schema.json",
 	"vcs": {
 		"enabled": true,
@@ -18,7 +17,8 @@
 		"rules": {
 			"recommended": true,
 			"complexity": {
-				"noStaticOnlyClass": "off"
+				"noStaticOnlyClass": "off",
+				"noUselessConstructor": "off"
 			}
 		}
 	},

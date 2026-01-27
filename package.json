@@ -1,11 +1,17 @@
 {
   "name": "caffeine-core",
-  "module": "index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "devDependencies": {
     "@faker-js/faker": "^10.2.0",
     "@types/bun": "latest",
     "@vitest/coverage-v8": "^4.0.18",
+    "tsup": "^8.5.1",
     "vite-tsconfig-paths": "^6.0.5",
     "vitest": "^4.0.18"
   },
@@ -17,14 +23,45 @@
     "uuid": "^13.0.0"
   },
   "scripts": {
+    "build": "tsup index.ts src/dtos/index.ts src/errors/index.ts src/errors/domain/index.ts src/factories/index.ts src/models/index.ts src/types/index.ts --format esm,cjs --dts --clean",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage"
   },
   "exports": {
-    "./dtos": "./src/dtos/index.ts",
-    "./errors": "./src/errors/index.ts",
-    "./factories": "./src/factories/index.ts",
-    "./models": "./src/models/index.ts",
-    "./types": "./src/types/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dtos": {
+      "types": "./dist/src/dtos/index.d.ts",
+      "import": "./dist/src/dtos/index.js",
+      "require": "./dist/src/dtos/index.cjs"
+    },
+    "./errors": {
+      "types": "./dist/src/errors/index.d.ts",
+      "import": "./dist/src/errors/index.js",
+      "require": "./dist/src/errors/index.cjs"
+    },
+    "./errors/domain": {
+      "types": "./dist/src/errors/domain/index.d.ts",
+      "import": "./dist/src/errors/domain/index.js",
+      "require": "./dist/src/errors/domain/index.cjs"
+    },
+    "./factories": {
+      "types": "./dist/src/factories/index.d.ts",
+      "import": "./dist/src/factories/index.js",
+      "require": "./dist/src/factories/index.cjs"
+    },
+    "./models": {
+      "types": "./dist/src/models/index.d.ts",
+      "import": "./dist/src/models/index.js",
+      "require": "./dist/src/models/index.cjs"
+    },
+    "./types": {
+      "types": "./dist/src/types/index.d.ts",
+      "import": "./dist/src/types/index.js",
+      "require": "./dist/src/types/index.cjs"
+    }
   }
 }

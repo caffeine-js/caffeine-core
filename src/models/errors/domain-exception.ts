@@ -1,4 +1,4 @@
-import type { CoreExceptionType } from "../../types/core-exception-type";
+import type { CoreExceptionType } from "@/types";
 import { CoreException } from "../core-exception";
 
 export abstract class DomainException extends CoreException {

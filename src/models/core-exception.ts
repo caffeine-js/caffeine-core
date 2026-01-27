@@ -1,4 +1,4 @@
-import type { CoreExceptionType } from "../types/core-exception-type";
+import type { CoreExceptionType } from "@/types";
 
 export abstract class CoreException extends Error {
 	protected abstract readonly layer: CoreExceptionType;

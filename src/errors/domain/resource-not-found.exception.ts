@@ -1,4 +1,4 @@
-import { DomainException } from "../../models/errors/domain-exception";
+import { DomainException } from "@/models/errors";
 
 export class ResourceNotFoundException extends DomainException {
 	public readonly name = "Resource Not Found";
