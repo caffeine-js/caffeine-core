@@ -28,7 +28,7 @@
     "uuid": "^13.0.0"
   },
   "scripts": {
-    "build": "tsup index.ts src/dtos/index.ts src/errors/index.ts src/errors/domain/index.ts src/factories/index.ts src/models/index.ts src/types/index.ts --format esm,cjs --dts --clean",
+    "build": "tsup index.ts src/dtos/index.ts src/errors/index.ts src/errors/domain/index.ts src/factories/index.ts src/models/index.ts src/types/index.ts src/utils/index.ts --format esm,cjs --dts --clean",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "prepare": "bun run build && bun link"
@@ -68,6 +68,11 @@
       "types": "./dist/src/types/index.d.ts",
       "import": "./dist/src/types/index.js",
       "require": "./dist/src/types/index.cjs"
+    },
+    "./utils": {
+      "types": "./dist/src/utils/index.d.ts",
+      "import": "./dist/src/utils/index.js",
+      "require": "./dist/src/utils/index.cjs"
     }
   }
 }
