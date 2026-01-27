@@ -1,0 +1,29 @@
+{
+  "name": "caffeine-core",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@faker-js/faker": "^10.2.0",
+    "@types/bun": "latest",
+    "@vitest/coverage-v8": "^4.0.18",
+    "vite-tsconfig-paths": "^6.0.5",
+    "vitest": "^4.0.18"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "typebox": "^1.0.80"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "exports": {
+    "./dtos": "./src/dtos/index.ts",
+    "./errors": "./src/errors/index.ts",
+    "./factories": "./src/factories/index.ts",
+    "./models": "./src/models/index.ts",
+    "./types": "./src/types/index.ts"
+  }
+}
