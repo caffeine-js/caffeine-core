@@ -30,7 +30,8 @@
   "scripts": {
     "build": "tsup index.ts src/dtos/index.ts src/errors/index.ts src/errors/domain/index.ts src/factories/index.ts src/models/index.ts src/types/index.ts --format esm,cjs --dts --clean",
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "prepare": "bun run build && bun link"
   },
   "exports": {
     ".": {
