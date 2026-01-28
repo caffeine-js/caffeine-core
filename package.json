@@ -55,6 +55,11 @@
       "import": "./dist/src/errors/domain/index.js",
       "require": "./dist/src/errors/domain/index.cjs"
     },
+    "./errors/infra": {
+      "types": "./dist/src/errors/infra/index.d.ts",
+      "import": "./dist/src/errors/infra/index.js",
+      "require": "./dist/src/errors/infra/index.cjs"
+    },
     "./factories": {
       "types": "./dist/src/factories/index.d.ts",
       "import": "./dist/src/factories/index.js",
@@ -74,6 +79,11 @@
       "types": "./dist/src/utils/index.d.ts",
       "import": "./dist/src/utils/index.js",
       "require": "./dist/src/utils/index.cjs"
+    },
+    "./utils/infra/providers/prisma": {
+      "types": "./dist/src/utils/infra/providers/prisma/index.d.ts",
+      "import": "./dist/src/utils/infra/providers/prisma/index.js",
+      "require": "./dist/src/utils/infra/providers/prisma/index.cjs"
     }
   }
 }
