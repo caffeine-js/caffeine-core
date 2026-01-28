@@ -1,6 +1,6 @@
 type IsoDateProperties = {
 	createdAt: string;
-	updatedAt: string | undefined | null;
+	updatedAt?: string | undefined | null;
 };
 
 type OutputPrismaDateProperties = {
