@@ -9,7 +9,7 @@ describe("Resource Already Exists Exception", () => {
 		expect(exception.message).toBe(
 			"Resource already exists in the User domain.",
 		);
-		expect(exception.domainName).toBe("User");
+		expect(exception.layerName).toBe("User");
 	});
 
 	it("should create an instance with custom message", () => {

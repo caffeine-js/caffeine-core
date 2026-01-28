@@ -7,7 +7,7 @@ describe("Resource Not Found Exception", () => {
 		expect(exception).toBeInstanceOf(Error);
 		expect(exception.name).toBe("Resource Not Found");
 		expect(exception.message).toBe("Resource not found in the User domain.");
-		expect(exception.domainName).toBe("User");
+		expect(exception.layerName).toBe("User");
 	});
 
 	it("should create an instance with custom message", () => {

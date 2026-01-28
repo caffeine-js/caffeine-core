@@ -9,7 +9,7 @@ describe("Invalid Domain Data Exception", () => {
 		expect(exception.message).toBe(
 			"Invalid data provided for the User domain.",
 		);
-		expect(exception.domainName).toBe("User");
+		expect(exception.layerName).toBe("User");
 	});
 
 	it("should create an instance with custom message", () => {
